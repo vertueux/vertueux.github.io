@@ -2,13 +2,160 @@
 <html lang="fr">
 
 <head>
+    <meta content="Vertueux" property="og:title" />
+    <meta
+        content="This is a minimal website on which various articles are published in certain fields and sub-fields of science and philosophy."
+        property="og:description" />
+    <meta content="https://vertueux.github.io" property="og:url" />
+    <meta content="https://vertueux.github.io/images/logo/logo_rounded.png" property="og:image" />
+    <meta name="theme-color" content="#ffffff" />
+
     <meta charset="UTF-8">
-    <title>Publications</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="images/logo/logo_rounded.png">
+    <link rel="apple-touch-icon" href="images/logo/logo_rounded.png">
+
+    <meta name="google-site-verification" content="yCQR0T0MH4FMpUhVhZzBf7h4VAv_y2zJIyOg1VM6A50" />
+
+    <title>Vertueux</title>
+    <link rel="icon" href="images/logo/logo_rounded.png">
+
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <h1>Publications</h1>
-    <ul id="file-list"></ul>
-    <script src="app.js"></script>
+    <nav>
+        <a href="../" class="nav-icon" aria-label="visit homepage" aria-current="page" id="logo">
+            <img src="images/logo/logo_transparent_inverted.png">
+            <span>VERTUEUX</span>
+        </a>
+        <div class="main-navlinks">
+            <button class="hamburger" type="button" aria-label="toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navlinks-container">
+                <a href=""><span id="last-navlink">Recherche</span><img src="images/buttons/arrow-down-black.png"></a>
+            </div>
+        </div>
+        <div class="nav-external-link">
+            <div class="visit-website">
+                <a href="https://discord.com/invite/4m2SgCmWMr" target="_blank"><span>Discuter</span><img
+                        src="images/buttons/up-left-arrow-black.png"></a>
+                <a href="https://github.com/vertueux" target="_blank"><span>Visiter ma page GitHub</span><img
+                        src="images/buttons/up-left-arrow-black.png"></a>
+            </div>
+        </div>
+    </nav>
+    <section class="page">
+        <h1 id="mtitle">Indice de recherche</h1>
+        <main class="table">
+            <div class="input-group">
+                <input type="search" enterkeyhint="search" placeholder="Search" />
+            </div>
+            <section class="table_body">
+                <table>
+                    <thead>
+                        <tr id="ftr">
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="articles-date">
+                                <p>Mar 07, 2024</p>
+                            </td>
+                            <td class="articles-title">
+                                <a href="../early-on-the-legacy-of-libertinism">
+                                    <p>Sur l'héritage du libertinage</p>
+                                </a>
+                            </td>
+                            <td class="articles-description">
+                                <p>Le mouvement du libertinage, présent essentiellement du XVIe au XVIIIe siècle est un
+                                    mouvement promouvant la liberté de pensée,
+                                    notamment en s'écartant des principes moraux et religieux. Cet article discute d'une
+                                    forme dérivée d'un tel mouvement présent
+                                    au XXIe siècle. Un « libertinage moderne ».
+                                </p>
+                            </td>
+                            <td class="read-article">
+                                <a href="../early-on-the-legacy-of-libertinism/pdf/paper.pdf" target="_blank">
+                                    <button>
+                                        <p>Lire l'article<img src="images/buttons/up-left-arrow-black.png"></p>
+                                    </button>
+                                </a>
+                            </td>
+                            <td class="articles-type">
+                                <span>Domaine</span>
+                                <p>ESSAI</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="articles-date">
+                                <p>Nov 29, 2022</p>
+                            </td>
+                            <td class="articles-title">
+                                <a href="../early-unstoppable-train">
+                                    <p>Un train inarrêtable</p>
+                                </a>
+                            </td>
+                            <td class="articles-description">
+                                <p>Cet article est essentiellement une allégorie permettant de décrire le fondement de
+                                    la société, ainsi que sa poursuite et sa dangerosité face au monde extérieur.
+                                    Son expansion est semblable à un train progressant exponentiellement vers le bout du
+                                    tunnel.
+                                </p>
+                            </td>
+                            <td class="read-article">
+                                <a href="../early-unstoppable-train/pdf/paper.pdf" target="_blank">
+                                    <button>
+                                        <p>Lire l'article<img src="images/buttons/up-left-arrow-black.png"></p>
+                                    </button>
+                                </a>
+                            </td>
+                            <td class="articles-type">
+                                <span>Domaine</span>
+                                <p>ALLÉGORIE</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="articles-date">
+                                <p>Oct 31, 2022</p>
+                            </td>
+                            <td class="articles-title">
+                                <a href="../early-thoughts-on-freedom">
+                                    <p>Réflexion sur la liberté</p>
+                                </a>
+                            </td>
+                            <td class="articles-description">
+                                <p>La question et la doctrine que soulève cet article
+                                    est sur la notion de cette dernière. En effet, remettre en question
+                                    ce qu'est concrètement et véritablement la liberté, semblant
+                                    notamment être reformulée et redéfinie perpétuellement.
+                                </p>
+                            </td>
+                            <td class="read-article">
+                                <a href="../early-thoughts-on-freedom/pdf/paper.pdf" target="_blank">
+                                    <button>
+                                        <p>Lire l'article<img src="images/buttons/up-left-arrow-black.png"></p>
+                                    </button>
+                                </a>
+                            </td>
+                            <td class="articles-type">
+                                <span>Domaine</span>
+                                <p>ESSAI</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </section>
+    <script src="js/app.js"></script>
 </body>

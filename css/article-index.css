@@ -1,0 +1,27 @@
+@import url("font-faces.css");
+@import url("scrollbar.css");
+@import url("navbar.css");
+@import url("article-page.css");
+@import url("selection.css");
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat;
+    letter-spacing: -1px;
+    font-weight: 450;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: white;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

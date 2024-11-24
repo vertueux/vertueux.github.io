@@ -1,0 +1,228 @@
+:root {
+    --article-margin-tiny: 8%;
+    --page-width: 1300px;
+    --padding-left-from-page: 225px;
+}
+
+.page {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    width: var(--page-width);
+    background-color: white;
+    height: 100vh;
+}
+
+#ptitle {
+    display: inline-block;
+    font-family: NotoSerifJP-Medium;
+    font-size: 53px;
+    font-weight: 100;
+    vertical-align: top;
+}
+
+#ptype {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #2e2e2e;
+}
+
+.intro {
+    display: inline-block;
+    margin-top: 200px;
+    vertical-align: top;
+    padding-left: var(--padding-left-from-page);
+    padding-bottom: 75px;
+}
+
+.breakline {
+    width: 100%;
+    border-top: 1px solid rgb(177, 177, 177);
+}
+
+.info-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info-container span {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+}
+
+.info-container img {
+    width: 15px;
+    height: 15px;
+    margin-top: -4px;
+    vertical-align: middle;
+}
+
+.info-container a span {
+    color: black;
+}
+
+#readpaper {
+    position: absolute;
+    left: 0px;
+    margin-left: var(--padding-left-from-page);
+}
+
+.pub-info {
+    margin-top: 80px;
+    margin-left: var(--padding-left-from-page);
+}
+
+.pub-info h1 {
+    font-size: 28px;
+    font-family: Montserrat;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.pub-info p {
+    font-family: NotoSerifJP-Medium;
+    color: #323232;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0;
+    width: calc(var(--page-width) - 2*var(--padding-left-from-page));
+    padding-right: var(--article-margin-tiny);
+    padding-bottom: 160px;
+}
+
+.credits-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.credits-container span {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+}
+
+#author {
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+#authorname {
+    font-family: Montserrat;
+    position: absolute;
+    left: 0px;
+    margin-left: var(--padding-left-from-page);
+}
+
+.info-container button {
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 1px solid rgb(177, 177, 177);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+@media (max-height: 700px) {
+    .page {
+        height: max-content;
+        padding-bottom: 200px;
+    }
+
+    .intro {
+        margin-top: 100px;
+    }
+}
+
+
+@media (max-width: 1450px) {
+
+    /* This has to be set to page's width with a tiny gap (+150px in this case).*/
+    .page {
+        width: 100%;
+    }
+
+    .intro {
+        padding-left: var(--article-margin-tiny);
+    }
+
+    .breakline {
+        margin-left: var(--article-margin-tiny);
+        width: calc(100% - 2*(var(--article-margin-tiny)));
+    }
+
+    #date {
+        margin-left: var(--article-margin-tiny);
+    }
+
+    #readpaper {
+        margin-left: var(--article-margin-tiny);
+        margin-top: 30px;
+    }
+
+    #author {
+        margin-left: var(--article-margin-tiny);
+    }
+
+    #authorname {
+        margin-left: var(--article-margin-tiny);
+        margin-top: 30px;
+    }
+
+    .pub-info {
+        margin-left: calc(var(--article-margin-tiny));
+    }
+
+    .pub-info p {
+        width: calc(100% - var(--article-margin-tiny));
+        font-size: 19px;
+    }
+
+    #ptitle {
+        font-size: 45px;
+    }
+
+    .pub-info h1 {
+        font-size: 26px;
+    }
+
+    .credits-container span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    #ptitle {
+        font-size: 37px;
+    }
+
+    .info-container span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    #ptitle {
+        font-size: 35px;
+    }
+
+    .info-container span {
+        font-size: 14px;
+    }
+
+    .credits-container span {
+        font-size: 17px;
+    }
+
+    .pub-info p {
+        font-size: 18px;
+    }
+
+    .pub-info h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,384 @@
+:root {
+    --margin-tiny: 4%;
+    --page-width: 1300px;
+    --pc-navbar-height: 55px;
+    --mobile-navbar-height: 45px;
+    --mobile-nav-element-height: 100px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: var(--pc-navbar-height);
+    padding-left: calc((100% - var(--page-width))/2);
+    padding-right: calc((100% - var(--page-width))/2);
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #ffffff;
+    z-index: 4;
+}
+
+
+.navlinks-container img {
+    width: 18px;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 6;
+}
+
+.nav-icon span {
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 50px;
+    color: black;
+}
+
+.nav-icon img {
+    width: 40px;
+}
+
+.nav-external-link {
+    margin-left: auto;
+}
+
+.visit-website span {
+    margin: 0 2px;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+}
+
+.visit-website a:nth-child(1) {
+    margin: 0 20px;
+}
+
+.visit-website span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background-color: black;
+    transition: transform 0.1s linear;
+}
+
+.visit-website span:hover::after {
+    transform: scaleX(0.8);
+}
+
+.visit-website img {
+    width: 14px;
+    margin-left: 2px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navlinks-container span {
+    margin: 0 2px;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+}
+
+.navlinks-container a {
+    margin: 0 2px;
+    margin-right: 8px;
+}
+
+.navlinks-container span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background-color: black;
+    transition: transform 0.1s linear;
+}
+
+.navlinks-container span:hover::after {
+    transform: scaleX(0.8);
+}
+
+/* Depending on the media. Don't forget to modify index.js when 'max-width' is modified.*/
+@media (max-width: 1450px) {
+    .navlinks-container a {
+        margin: 0 10px;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav-external-link {
+        margin-left: auto;
+    }
+
+    nav {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: var(--mobile-navbar-height);
+
+        /* Fixing the nav margin. */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-icon {
+        margin-left: var(--margin-tiny);
+    }
+
+    .nav-icon img {
+        width: 30px;
+    }
+
+    .nav-icon span {
+        display: none;
+    }
+
+    /* Removing the images. */
+    .navlinks-container img {
+        display: none;
+    }
+
+    /* Hamburger. */
+    .hamburger {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        background: transparent;
+        align-items: center;
+        right: calc(var(--margin-tiny) + 6px);
+        top: 15px;
+        z-index: 3;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: black;
+        position: absolute;
+        pointer-events: none;
+        border-radius: 50px;
+        transition: opacity 0.3s 0.15s ease-out;
+    }
+
+    .hamburger span:nth-child(1),
+    .hamburger span:nth-child(2) {
+        transition: transform 0.3s ease-out;
+    }
+
+    .hamburger span:nth-child(1) {
+        transform: translateY(5px);
+    }
+
+    .hamburger span:nth-child(2) {
+        transform: translateY(-5px);
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translate(0) rotate(135deg);
+        background: black;
+    }
+
+    .hamburger.open span:nth-child(2) {
+        transform: translate(0) rotate(-135deg);
+        background: black;
+    }
+
+    @keyframes slide {
+        0% {
+            height: 5px;
+            box-shadow: none;
+        }
+
+        100% {
+            height: var(--mobile-nav-element-height);
+            box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .2);
+        }
+    }
+
+    @keyframes slideoff {
+        0% {
+            height: var(--mobile-nav-element-height);
+            box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .2);
+        }
+
+        100% {
+            height: 5px;
+            box-shadow: none;
+        }
+    }
+
+    @keyframes textappear {
+        0% {
+            opacity: 0;
+        }
+
+        70% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes textdisappear {
+        0% {
+            opacity: 1;
+        }
+
+        30% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes changetodark {
+        0% {
+            filter: blur(0px);
+        }
+
+        100% {
+            filter: blur(8px);
+        }
+    }
+
+    @keyframes changetobright {
+        0% {
+            filter: blur(8px);
+        }
+
+        100% {
+            filter: blur(0px);
+        }
+    }
+
+    .change-to-dark {
+        animation-name: changetodark;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    .change-to-bright {
+        animation-name: changetobright;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    .main-navlinks {
+        order: 1;
+    }
+
+    .navlinks-container {
+        position: fixed;
+        background-color: #ffffff;
+        width: 100%;
+        left: 0;
+        top: var(--mobile-navbar-height);
+        padding: 0;
+        margin: 0;
+        height: 5px;
+        overflow: hidden;
+        z-index: 4;
+    }
+
+    .navlinks-container a::after {
+        display: none;
+    }
+
+    .navlinks-container.open span {
+        animation-name: textappear;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    .navlinks-container span {
+        font-size: 20px;
+    }
+
+    .navlinks-container a {
+        margin-top: 25px;
+        margin-left: var(--margin-tiny);
+        color: black;
+        padding: 0;
+    }
+
+    .close-nav {
+        animation-name: slideoff;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    .disappear {
+        animation-name: textdisappear;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    .navlinks-container.open {
+        animation-name: slide;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    .nav-external-link {
+        order: 3;
+        margin-left: 0;
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav-icon span {
+        display: none;
+    }
+
+    .nav-icon img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-icon span {
+        font-size: 20px;
+    }
+}

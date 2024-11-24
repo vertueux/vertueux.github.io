@@ -1,0 +1,29 @@
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out;
+}
+
+/* Removing the 'X'. */
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+::placeholder {
+    color: rgb(205, 205, 205);
+    opacity: 1;
+    /* Firefox. */
+}
+
+::-ms-input-placeholder {
+    /* Edge 12 -18. */
+    color: rgb(205, 205, 205);
+}
